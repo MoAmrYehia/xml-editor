@@ -1,3 +1,8 @@
+"""
+Created on Fri Jul  9 03:10:11 2021
+@author: Mohamed Amr
+"""
+
 import xmltodict, json
 
 
@@ -21,8 +26,8 @@ def convert_xml_to_json(xml_file_name):
     return json.dumps(obj)
 
 
-xml_object = convert_xml_to_json(xml_file_name)
-save_xml(json_file_name, xml_object)
+# xml_object = convert_xml_to_json(xml_file_name) For testing
+# save_xml(json_file_name, xml_object) For testing
 
 
 
