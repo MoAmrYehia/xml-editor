@@ -227,4 +227,4 @@ class Compression():
         
 
         
-Compression().compressFile("example_1.json")
+#Compression().compressFile("example_1.json")
