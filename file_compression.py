@@ -24,7 +24,7 @@ class Compressor():
                 
 
         
-Compressor().compress_file("example_1.json")
+#Compressor().compress_file("example_1.json")
 #Compressor.read_compressed_file("file.txt.gz")
         
 
