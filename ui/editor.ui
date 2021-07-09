@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 2px solid #38B6FF; </string>
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
      <string>CHECK ERRORS</string>
@@ -36,7 +36,7 @@
    <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>40</y>
       <width>701</width>
       <height>771</height>
@@ -44,26 +44,24 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #121212; color:#38B6FF; border: 2px solid white; 
-font: 14pt &quot;Lato&quot;;
+font: 14pt solid &quot;Lato&quot;;
 </string>
     </property>
     <property name="plainText">
-     <string>&lt;book&gt;
-sndk,d.,d.dfl
-&lt;/book&gt;</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>270</y>
+      <y>250</y>
       <width>231</width>
       <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 2px solid #38B6FF; </string>
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
      <string>PRETTIFY</string>
@@ -73,13 +71,13 @@ sndk,d.,d.dfl
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>450</y>
+      <y>540</y>
       <width>231</width>
       <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 2px solid #38B6FF; </string>
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
      <string>COMPRESS</string>
@@ -89,16 +87,32 @@ sndk,d.,d.dfl
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>630</y>
-      <width>261</width>
+      <y>670</y>
+      <width>271</width>
       <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 2px solid #38B6FF; </string>
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
      <string>CONVERT TO JSON</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>390</y>
+      <width>231</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
+    </property>
+    <property name="text">
+     <string>MINIFY</string>
     </property>
    </widget>
   </widget>
