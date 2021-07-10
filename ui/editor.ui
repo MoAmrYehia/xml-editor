@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>40</y>
+      <y>10</y>
       <width>231</width>
       <height>81</height>
      </rect>
@@ -55,7 +55,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>180</y>
+      <y>250</y>
       <width>231</width>
       <height>81</height>
      </rect>
@@ -71,7 +71,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>450</y>
+      <y>500</y>
       <width>231</width>
       <height>81</height>
      </rect>
@@ -87,7 +87,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>580</y>
+      <y>620</y>
       <width>271</width>
       <height>91</height>
      </rect>
@@ -96,14 +96,14 @@ font: 14pt solid &quot;Lato&quot;;
      <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
-     <string>CONVERT TO JSON</string>
+     <string>CONVERT TO XML</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>310</y>
+      <y>370</y>
       <width>231</width>
       <height>81</height>
      </rect>
@@ -119,7 +119,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>720</y>
+      <y>750</y>
       <width>271</width>
       <height>91</height>
      </rect>
@@ -129,6 +129,22 @@ font: 14pt solid &quot;Lato&quot;;
     </property>
     <property name="text">
      <string>COMPRESS JSON</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>130</y>
+      <width>231</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
+    </property>
+    <property name="text">
+     <string>FIX ERRORS</string>
     </property>
    </widget>
   </widget>
