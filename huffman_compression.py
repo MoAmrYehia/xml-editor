@@ -5,7 +5,6 @@ Created on Fri Jul  9 15:28:50 2021
 @author: dinaa
 """
 import sys
-
 # Changing python's default recursion depth so it won't cause us any errors while reading the files
 sys.setrecursionlimit(100000)
 
@@ -54,7 +53,7 @@ class Compression():
         """Method that encodes the leaf nodes."""
         if (node.parent) == None:
             return b''
-        if (node.parent.left) == node:
+        elif (node.parent.left) == node:
             return self.encodeNode(node.parent)+b'0'
         else:
             return self.encodeNode(node.parent)+b'1'
@@ -70,15 +69,19 @@ class Compression():
             bytes_list = [0]*length  # List where we'll store the read bytes
     
             ind = 0
-            while (ind<length):
-                bytes_list[ind] = file.read(1) # Reading one char at a time
-                ind = ind + 1
+            while (True):
+                if(ind<length):
+                    bytes_list[ind] = file.read(1) # Reading one char at a time
+                    ind = ind + 1
+                else:
+                    break
 
         count = {}  # Dict to count the number of occurrences of each character
         nodes_dict = {}  # dictionary that contains the nodes created out of the file characters
         nodes = []      # List of nodes used to build the Huffman tree 
         bytes_dict = {} # dictionary containing the encoded characters
 
+        
         for i in bytes_list:
             if i not in count.keys():
                 count[i] = 0
@@ -145,6 +148,13 @@ class Compression():
                     output = output | 1
             object.write(int.to_bytes(output,1,byteorder='big'))
             
+
+        
+
+        
+#Compression().compressFile("data-sample.xml")
+#Compression().compressFile("example_1.json")
+#Compression().compressFile("sample.json")            
 
         
 
