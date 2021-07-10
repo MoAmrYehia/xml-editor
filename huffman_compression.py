@@ -151,3 +151,4 @@ class Compression():
         
 #Compression().compressFile("data-sample.xml")
 #Compression().compressFile("example_1.json")
+#Compression().compressFile("sample.json")
