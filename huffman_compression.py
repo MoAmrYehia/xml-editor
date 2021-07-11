@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul  9 15:28:50 2021
-
+Created on Sun Jul  11 15:28:50 2021
 @author: dinaa
 """
 import sys
+
 # Changing python's default recursion depth so it won't cause us any errors while reading the files
 sys.setrecursionlimit(100000000)
 
@@ -21,37 +21,39 @@ class node():
 
 class Compression():
     """Class that implements Huffman's Algorithm for compressing files."""
-    def createTree(self,nodes):
-        """Method that builds the huffman(binary tree or a min heap)."""
+    def createTree(self, nodes):
         # First thing to do is sort the nodes in an ascending order
-        nodes.sort(key=lambda n: n.value)
-        length = len(nodes)
-        
+        nodes.sort(key=lambda x: x.value)
+
         # Recursion stopping condition
-        if length == 1:
-            return nodes[0]
+        if len(nodes)==1:
+            return nodes[0]    
 
         # Merging leaf nodes into one node
         left = nodes[0]
         right = nodes[1]
-        value = nodes[0].value + nodes[1].value
+        value = left.value + right.value
         new_node = node(value, left, right)
 
         # We delete the two nodes with the smallest frequency and use their sum to create a new parent node
-        nodes[0].parent = nodes[1].parent
-        nodes[1].parent = new_node.parent
-        nodes.pop()
-        nodes.pop()
-        nodes.insert(0, new_node)
-
-        return (self.createTree(nodes)) # Recursively call itself until the tree is formed
+        nodes[0].parent = nodes[1].parent = new_node
+        nodes.pop(0)
+        nodes.pop(0)
+        nodes.insert(0, new_node)   
+        return (self.createTree(nodes)) # Recursively call itself
 
     @staticmethod    
     def compress(self,file_path):
         """Interface method for the user to compress files."""
         self.compressFile(file_path)
-    
-    def encodeNode(self,node):            
+
+    @staticmethod    
+    def extract(self,file_path):
+        """Interface function for the user to extract files."""
+        self.extractFile(file_path)
+
+
+    def encodeNode(self, node):            
         """Method that encodes the leaf nodes."""
         code = b''
         if (node.parent) == None:
@@ -125,7 +127,7 @@ class Compression():
         path = input_file.split('.') # Input file path
         file_name = input_file.split('/')[-1] # Extracting the file's name from the given path
 
-        with open(path[0]+'.zip','wb') as object: # Creating the .zip file
+        with open(path[0]+'.bin','wb') as object: # Creating the .zip file
             try:
                 object.write((file_name+'\n').encode(encoding='UTF-8'))
             except OverflowError as err:
@@ -172,7 +174,7 @@ class Compression():
                     output = output | 1
             object.write(int.to_bytes(output,1,byteorder='big'))
 
-#Compression().compressFile("data-sample.xml")
-#Compression().compressFile("data.xml")
-#Compression().compressFile("example_1.json")
-#Compression().compressFile("sample.json")
+
+#Compression().compressFile("sample2.json") 
+#Compression().compressFile("sample-data.xml") 
+#Compression().compressFile("data.xml") 
