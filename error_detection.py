@@ -9,6 +9,8 @@ def collect_tags(filename):
                 line = line[:line.find('<!')] + line[line.find('->') + 1:]
             if line.find('<?') != -1: #A Declaration line
                 continue
+            if line.find('/>'):
+                continue
             
             while line.find('<') != -1:
                 ind_start = line.find('<')
