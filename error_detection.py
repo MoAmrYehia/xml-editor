@@ -44,6 +44,7 @@ class ErrorDetection():
         #Checks if there are errors, returns the errors and lines each with a flag indicating error
         tags = self.collectTags(filename)
         queue = []
+        lines_queue = []
         errors = []
         error_lines = []
         line_type = []
@@ -55,6 +56,7 @@ class ErrorDetection():
 
             if '/' not in tag[1]:    # Opening tag
                 queue.append(tag[1])
+                lines_queue.append(tag[0])
             elif '/' in tag[1]:      # Closing tag
                 # Collecting tag names
                 ind_end = None
@@ -66,6 +68,7 @@ class ErrorDetection():
 
                 if len(queue) > 0 and tag[1] == '</' + queue[-1][1:]:
                     queue.pop()
+                    lines_queue.pop()
                 else:
                     # Tag mismatch - error type 1
                     if len(queue) > 0 and '</' + queue[-1][1:] not in tag_names[ind:ind_end] and '<' + tag[1][2:] not in queue:
@@ -73,21 +76,20 @@ class ErrorDetection():
                         error_lines.append(error_line)
                         line_type.append([error_line, 1])
                         queue.pop()
+                        lines_queue.pop()
                     else:
                         # Tag opened with no closing - error type 2
                         if '</' + queue[-1][1:] not in tag_names[ind:ind_end]:
-                            # Finding the correct line number
-                            line_num = None
-                            for i in tags:
-                                if i[1] == queue[-1]:
-                                    line_num = i[0]
-                            errors.append([queue[-1], line_num, 2])
-                            error_lines.append(line_num)
-                            line_type.append([line_num, 2])
+                            
+                            errors.append([queue[-1], lines_queue[-1], 2])
+                            error_lines.append(lines_queue[-1])
+                            line_type.append([lines_queue[-1], 2])
                             queue.pop()
+                            lines_queue.pop()
                             # Check if the top of queue is the matching tag
                             if '</' + queue[-1][1:] == tag[1]:
                                 queue.pop()
+                                lines_queue.pop()
                         # Tag closed with no opening - error type 3
                         elif '/' in tag_names[ind - 1]:
                             errors.append([tag[1], tag[0], 3])
@@ -119,7 +121,7 @@ class ErrorDetection():
         return errors, lines
 
     def correctErrors(self, filename):
-        errors = self.detectErrors(filename)
+        errors, lines = self.detectErrors(filename)
         line_num = 0
         lines = []
         lines_with_error = []
@@ -150,6 +152,7 @@ class ErrorDetection():
                         lines.append(curr_line + error_string)
         return lines
 
-# tags = ErrorDetection().collectTags('file.xml')
-# errors, error_lines = ErrorDetection().detectErrors('file.xml')
-# correct_lines = ErrorDetection().correctErrors('file.xml')
+tags = ErrorDetection().collectTags('tt.xml')
+errors, error_lines = ErrorDetection().detectErrors('tt.xml')
+correct_lines = ErrorDetection().correctErrors('tt.xml')
+print(correct_lines)
