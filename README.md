@@ -34,7 +34,7 @@ The XML egitor was built using PyQt5 to for the interactive GUI. PyQt5 allowed u
 
 
 ## Current Contributors
-<a href="https://github.com/MoAmrYehia/xml-editor//graphs/contributors">
+<a href="https://github.com/MoAmrYehia/xml-editor/graphs/contributors">
     
   <img src="https://contributors-img.web.app/image?repo=MoAmrYehia/xml-editor/" />
 </a>
