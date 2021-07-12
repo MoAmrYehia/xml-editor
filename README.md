@@ -24,3 +24,6 @@ XML (Extensible Markup Language) is one of the most famous formats for storing a
 * Minifying the XML file: Since spaces and newlines (\n) are actually characters that can increase the size of an XML document. This feature should aim at decreasing the size of an XML file (compressing it) by deleting the whitespaces and indentations.
 
 * Compressing the data in the XML/JSON file: You should come-up with a way to reduce the size of the file using a data compression technique. You can invent your own ad-hoc method for such compression. On the other hand, you can check how JSONH works and try to distill ideas from it. Finally, you can use a data compression technique such as bytepair encoding [byte pair encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding).The smaller the output file is, the more efficient your algorithm is.
+
+## How We Built It
+The XML egitor was built using PyQt5 to for the interactive GUI. PyQt5 allowed us to built a full user experience. For the backend we used python to enhance different functionality. 
