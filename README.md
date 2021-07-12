@@ -13,9 +13,9 @@ XML (Extensible Markup Language) is one of the most famous formats for storing a
 
 ## Main requirements
 
-⋅⋅⋅Building a GUI in which the user can specify the location of an input XML file.
+* Building a GUI in which the user can specify the location of an input XML file.
 
-⋅⋅⋅Checking the XML consistency: The input XML may have inconsistencies like missing any of the closing and opening tags or not matching tags.The program should be able to detect and visually show any errors in consistency. Optimally, the program will also be able to automatically solve the errors.
+* Checking the XML consistency: The input XML may have inconsistencies like missing any of the closing and opening tags or not matching tags.The program should be able to detect and visually show any errors in consistency. Optimally, the program will also be able to automatically solve the errors.
 
 ⋅⋅⋅Formatting (Prettifying) the XML: the XML file should be well formatted by keeping the indentation for each level.
 
