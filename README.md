@@ -27,3 +27,14 @@ XML (Extensible Markup Language) is one of the most famous formats for storing a
 
 ## How We Built It
 The XML egitor was built using PyQt5 to for the interactive GUI. PyQt5 allowed us to built a full user experience. For the backend we used python to enhance different functionality. 
+
+
+## Installation and Running
+>To be ADDED
+
+
+## Current Contributors
+<a href="https://github.com/MoAmrYehia/xml-editor//graphs/contributors">
+    
+  <img src="https://contributors-img.web.app/image?repo=MoAmrYehia/xml-editor/" />
+</a>
