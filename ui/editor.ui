@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1122</width>
-    <height>899</height>
+    <height>930</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,9 +37,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>30</y>
+      <y>0</y>
       <width>721</width>
-      <height>811</height>
+      <height>881</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -84,7 +84,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>620</y>
+      <y>780</y>
       <width>271</width>
       <height>91</height>
      </rect>
@@ -93,7 +93,7 @@ font: 14pt solid &quot;Lato&quot;;
      <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
-     <string>CONVERT TO XML</string>
+     <string>DOWNLOAD</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
@@ -116,7 +116,7 @@ font: 14pt solid &quot;Lato&quot;;
     <property name="geometry">
      <rect>
       <x>790</x>
-      <y>750</y>
+      <y>640</y>
       <width>271</width>
       <height>91</height>
      </rect>
@@ -125,7 +125,7 @@ font: 14pt solid &quot;Lato&quot;;
      <string notr="true">background-color: #121212; color:white; font:16pt  solid  &quot;Lato&quot;; border: 4px solid #38B6FF; </string>
     </property>
     <property name="text">
-     <string>COMPRESS JSON</string>
+     <string>CONVERT TO JSON</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_7">
@@ -151,7 +151,7 @@ font: 14pt solid &quot;Lato&quot;;
      <x>0</x>
      <y>0</y>
      <width>1122</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
