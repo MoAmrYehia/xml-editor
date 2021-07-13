@@ -7,7 +7,7 @@ Created on Sun Jul 11 07:54:18 2021
 """
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import  QColor
+from PyQt5.QtGui import  QColor,QPixmap
 import sys
 import tkinter as tk
 from tkinter import filedialog
@@ -28,7 +28,9 @@ class login(QMainWindow):
         super(login, self).__init__()
         loadUi("ui/xml_main.ui",self)
         self.pushButton.clicked.connect(self.Browse)
-        
+        pixmap = QPixmap("screenshots/logo.png")
+        self.label.setPixmap(pixmap)
+        self.label.resize(pixmap.width(), pixmap.height())
         
         
     def Browse(self):
@@ -118,5 +120,7 @@ class functionpage(QMainWindow):
 app = QApplication(sys.argv)
 widget = QtWidgets.QStackedWidget()
 widget.addWidget(login())
+widget.setFixedWidth(1200)
+widget.setFixedHeight(1000)
 widget.show()
 app.exec_()
