@@ -7,14 +7,14 @@ Created on Sun Jul 11 07:54:18 2021
 """
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QPainter, QColor, QPen
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import Qt
+from PyQt5.QtGui import  QColor
 import sys
 import tkinter as tk
 from tkinter import filedialog
 from formating import *
 from error_detection import *
+from xml_to_json import *
+from huffman_compression import *
 
 
 
@@ -79,6 +79,7 @@ class functionpage(QMainWindow):
         
     def fix_errors(self):
         after_correction= ErrorDetection().correctErrors(self.file_path)
+        self.plainTextEdit.clear()
         print(after_correction)
         for i in after_correction:
             self.plainTextEdit.append(str(i))
@@ -96,12 +97,14 @@ class functionpage(QMainWindow):
             self.plainTextEdit.append(str(i))
         
     def compress(self):
-        print(kfjnsdk)
+        Compression().compressFile(self.file_path)
     def convert_to_xml(self):
         print(fdjn)
     def convert_to_json(self):
-        print(fkjk)
-        
+        json=convert_xml_to_json(self.file_path)
+        self.plainTextEdit.clear()
+        for i in json:
+            self.plainTextEdit.append(str(i))
        
         
         

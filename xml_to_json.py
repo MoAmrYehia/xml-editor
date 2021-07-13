@@ -35,7 +35,7 @@ def get_xml_dict(fileArg):
     
 def convert_xml_to_json(xml_file_name):
     with open(xml_file_name , 'r') as fil:    
-        return json.dumps(get_xml_dict(fil.read()))
+        return (get_xml_dict(fil.read()))
 
 def save_json(json_file_name, xml_object):
     
