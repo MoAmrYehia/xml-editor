@@ -7,10 +7,14 @@ Created on Sun Jul 11 07:54:18 2021
 """
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtGui import QPainter, QColor, QPen
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import Qt
 import sys
 import tkinter as tk
 from tkinter import filedialog
 from formating import *
+from error_detection import *
 
 
 
@@ -54,20 +58,42 @@ class functionpage(QMainWindow):
         
         
     def check_errors(self):
-        print(dfnkdf)
+        errors,error_lines= ErrorDetection().detectErrors(self.file_path)
+        self.plainTextEdit.clear()
+        print(error_lines)
+        print(errors)
+        for i in error_lines:
+            if(i[1]):
+                if(i[2]==1):
+                    self.plainTextEdit.setTextColor(QColor(120,60,55))
+                    self.plainTextEdit.append(str(i[0]))
+                elif(i[2]==2):
+                    self.plainTextEdit.setTextColor(QColor(120,60,50))
+                    self.plainTextEdit.append(str(i[0]))
+                elif(i[2]==3):
+                    self.plainTextEdit.setTextColor(QColor(120,60,40))
+                    self.plainTextEdit.append(str(i[0]))
+            else:
+                self.plainTextEdit.setTextColor(QColor(56,182,255))
+                self.plainTextEdit.append(str(i[0]))
         
     def fix_errors(self):
-        print(dkfjn)
+        after_correction= ErrorDetection().correctErrors(self.file_path)
+        print(after_correction)
+        for i in after_correction:
+            self.plainTextEdit.append(str(i))
         
     def prettify(self):
         pretty_list=Pretty.pretty_xml(self.file_path)
+        self.plainTextEdit.clear()
         for i in pretty_list:
-            self.plainTextEdit.appendPlainText(str(i))
+            self.plainTextEdit.append(str(i))
         
     def minify(self):
         minify_list=minifying.minifying_file(self.file_path)
+        self.plainTextEdit.clear()
         for i in minify_list:
-            self.plainTextEdit.appendPlainText(str(i))
+            self.plainTextEdit.append(str(i))
         
     def compress(self):
         print(kfjnsdk)

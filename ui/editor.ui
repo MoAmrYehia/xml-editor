@@ -33,7 +33,7 @@
      <string>CHECK ERRORS</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QTextEdit" name="plainTextEdit">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -46,9 +46,6 @@
      <string notr="true">background-color: #121212; color:#38B6FF; border: 3px solid white; 
 font: 14pt solid &quot;Lato&quot;;
 </string>
-    </property>
-    <property name="plainText">
-     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -154,7 +151,7 @@ font: 14pt solid &quot;Lato&quot;;
      <x>0</x>
      <y>0</y>
      <width>1122</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
