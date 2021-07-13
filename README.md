@@ -1,9 +1,8 @@
 # XML Editor
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/MoAmrYehia/xml-editor/main/screenshots/logo_README.png">
+    <img src="https://github.com/MoAmrYehia/xml-editor/blob/main/screenshots/logo-removebg-preview.png">
 </p>
-
 
 
 This is a University project, where students could apply data structure concepts to a real-life project. At the end of this project, my team would be able to effectively implement different data structures from scratch, build an XML editor and convert XML to JSON. 
