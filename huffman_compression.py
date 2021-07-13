@@ -10,7 +10,7 @@ sys.setrecursionlimit(100000000)
 
 class node():
     """Huffman tree nodes implementation.
-    A Huffman tree is basically a min heap/binary search tree.
+    A Huffman tree is basically a priority queue/binary search tree.
     value: is the code assigned to the character
     right,left, parent: are the right,left,parent of the node."""
     def __init__(self,value = None, left = None, right = None, parent = None):
