@@ -28,7 +28,7 @@ class login(QMainWindow):
         super(login, self).__init__()
         loadUi("ui/xml_main.ui",self)
         self.pushButton.clicked.connect(self.Browse)
-        pixmap = QPixmap("screenshots/logo.png")
+        pixmap = QPixmap("screenshots/logo-removebg-preview.png")
         self.label.setPixmap(pixmap)
         self.label.resize(pixmap.width(), pixmap.height())
         
@@ -70,10 +70,10 @@ class functionpage(QMainWindow):
                     self.plainTextEdit.setTextColor(QColor(120,60,55))
                     self.plainTextEdit.append(str(i[0]))
                 elif(i[2]==2):
-                    self.plainTextEdit.setTextColor(QColor(120,60,50))
+                    self.plainTextEdit.setTextColor(QColor(255,192,203))
                     self.plainTextEdit.append(str(i[0]))
                 elif(i[2]==3):
-                    self.plainTextEdit.setTextColor(QColor(120,60,40))
+                    self.plainTextEdit.setTextColor(QColor(255,69,0))
                     self.plainTextEdit.append(str(i[0]))
             else:
                 self.plainTextEdit.setTextColor(QColor(56,182,255))
@@ -101,7 +101,9 @@ class functionpage(QMainWindow):
     def compress(self):
         Compression().compressFile(self.file_path)
     def convert_to_xml(self):
-        print(fdjn)
+        file=open("out.xml",'w')
+        STR=self.plainTextEdit.toPlainText()
+        file.write(STR)
     def convert_to_json(self):
         json=convert_xml_to_json(self.file_path)
         self.plainTextEdit.clear()

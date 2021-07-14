@@ -10,6 +10,40 @@ Created on Fri Jul  9 10:11:12 2021
 #xml2_filename="/home/ehab/Downloads/data/out.xml"
 class Pretty():
     def pretty_xml(xml_filename):
+        
+        """  stack = []
+        tagvalue = []
+        tagname = []
+        result = []
+        data= []
+        f=0
+        with open(xml_filename,"r")as a_file:
+            for line in a_file:
+                stripped_line=line.strip()
+                if(stripped_line[1]!='?'):
+                    Str=stripped_line.split('>',)
+                    for i in Str:
+                        if (len(i)!=0 and i[0]=="<"):
+                            #print(i.split(' ',1)[0][1:])
+                            if i.split(' ',1)[0][1:][0]=='/':
+                                stack.pop()
+                                f-=1
+                            else:
+                                stack.append(i.split(' ',1)[0][1:])
+                                
+                                result.append(f*"   "+i+">")
+                                f+=1
+                        else:
+                            if(len(i)!=0):
+                                #print(i[0:i.find('<')])
+                                result.append(f*"   "+i[0:i.find('<')])
+                                #f+=1
+                                if i[i.find('<')+1:][0]=='/':
+                                    f-=1
+                                    result.append(f*"   "+"<"+i[i.find('<')+1:][0:]+">")
+                                    stack.pop()
+                                    #f-=1
+                                        """
         tags=[]
         indent=[]
         result=[]
@@ -38,7 +72,7 @@ class Pretty():
                 else:
                     result.append((i)*"  "+stripped_line)
                    
-                        
+        
         return result
 ###############minifying####################
 class minifying():

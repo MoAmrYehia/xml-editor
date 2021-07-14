@@ -152,7 +152,7 @@ class ErrorDetection():
                         lines.append(curr_line + error_string)
         return lines
 
-tags = ErrorDetection().collectTags('/home/ehab/Downloads/data/tt.xml')
-errors, error_lines = ErrorDetection().detectErrors('/home/ehab/Downloads/data/tt.xml')
-correct_lines = ErrorDetection().correctErrors('/home/ehab/Downloads/data/tt.xml')
-print(error_lines)
+tags = ErrorDetection().collectTags('/media/ehab/Data 2/faculty of engineering ain shams/3rd CSE/2nd term/Ds/xml-editor/data/tt.xml')
+errors, error_lines = ErrorDetection().detectErrors('/media/ehab/Data 2/faculty of engineering ain shams/3rd CSE/2nd term/Ds/xml-editor/data/tt.xml')
+correct_lines = ErrorDetection().correctErrors('/media/ehab/Data 2/faculty of engineering ain shams/3rd CSE/2nd term/Ds/xml-editor/data/tt.xml')
+print(correct_lines)
