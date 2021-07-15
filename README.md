@@ -25,7 +25,7 @@ XML (Extensible Markup Language) is one of the most famous formats for storing a
 * Compressing the data in the XML/JSON file.
 
 ## How We Built It
-The XML egitor was built using PyQt5 to for the interactive GUI. PyQt5 allowed us to built a full user experience. For the backend we used python to enhance different functionality. 
+The XML editor was built using PyQt5 to for the interactive GUI. PyQt5 allowed us to built a full user experience. For the backend we used python to enhance different functionality. 
 
 
 
